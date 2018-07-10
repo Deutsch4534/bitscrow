@@ -6,7 +6,7 @@
 
         	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="keywords" content="bitcoin, wallet, multisig, multisignature, address, browser, javascript, js, broadcast, transaction, verify, decode" />
-		<meta name="description" content="A Bitcoin Wallet written in Javascript. Supports Multisig, Custom Transactions, nLockTime and more!" />
+		<meta name="description" content="A Bitcoin Escrow Service written in Javascript. Supports Multisig, Custom Transactions and more!" />
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,7 +62,7 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span> New<b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li><a href="#newAddress" data-toggle="tab">New Address</a></li>
-									<li><a href="#newMultiSig" data-toggle="tab">MultiSig Address</a></li>
+									<li><a href="#newMultiSig" data-toggle="tab">Escrow Address</a></li>
 									<li class="divider"></li>
 									<li><a href="#newTransaction" data-toggle="tab">Transaction</a></li>
 								</ul>
@@ -106,8 +106,8 @@
 							</div>
 
 							<div class="col-md-4">
-								<h3><span class="glyphicon glyphicon-fullscreen"></span> MultiSig</h3>
-								<p>We offer a fully transparent <a href="#newMultiSig">multisig</a> solution which works seamlessly offline and with other bitcoin clients.</p>
+								<h3><span class="glyphicon glyphicon-fullscreen"></span>Bitcoin Escrow</h3>
+								<p>We offer a fully transparent <a href="#newMultiSig">Escrow</a> solution which works seamlessly offline and with other bitcoin clients.</p>
 							</div>
 
 							<div class="col-md-4">
@@ -120,7 +120,7 @@
 							
 							<div class="col-md-4">
 								<h3><span class="glyphicon glyphicon-globe"></span> Addresses</h3>
-								<p>We support <a href="#newAddress">regular addresses</a>, <a href="#newMultiSig">multisig addressess</a> and provide access to your own private keys completely client side!</p>
+								<p>We support <a href="#newAddress">regular addresses</a>, <a href="#newMultiSig">escrow addressess</a> and provide access to your own private keys completely client side!</p>
 							</div>
 						</div>
 					</div>
@@ -189,7 +189,7 @@
 					</div>
 
 					<div class="tab-pane tab-content" id="newMultiSig">
-						<h2>New Multisig Address <small>Secure multisig address</small></h2>
+						<h2>New Escrow Address <small>Secure escrow address</small></h2>
 
 						<div class="row">
 
@@ -260,7 +260,7 @@
 						<h2>Transaction <small>Create a new transaction</small></h2>
 						<p>Use this page to create a raw transaction</p>
 
-						<b>Enter Multisig Redeem Script</b>:
+						<b>Enter Escrow Redeem Script</b>:
 						<div class="input-group">
 							<span class="input-group-btn">
 								<button class="btn btn-info qrcodeScanner" type="button" data-toggle="modal" data-target="#modalQrcodeScanner" forward-result="#redeemFrom"><span class="glyphicon glyphicon-camera"></span></button>
@@ -406,7 +406,7 @@
 							<p><span style="float:right"><a href="javascript:;" target="_blank" class="verifyLink" title="Link to this page"><span class="glyphicon glyphicon-link"></span></a></span>The above redeem script has been decoded</p>
 
 							<div class="hidden" id="verifyRsDataMultisig">
-                                <label>Multi Signature Address</label>
+                                <label>Escrow Address</label>
     							<div class="row">
     								<div class="col-lg-6">
     									<div class="input-group">
@@ -478,7 +478,7 @@
 							<table class="table table-striped table-hover ins">
 								<thead>
 									<tr style="font-weight:bold;">
-										<td><abbr title="the transaction id">Txid</abbr></td><td><abbr title="index id of the the transaction">N</abbr></td><td><abbr title="transaction script">Script</abbr></td><td><abbr title="is input signed?">Signed?</abbr></td><td><abbr title="is transaction a multisig transaction?">MultiSig?</abbr></td>
+										<td><abbr title="the transaction id">Txid</abbr></td><td><abbr title="index id of the the transaction">N</abbr></td><td><abbr title="transaction script">Script</abbr></td><td><abbr title="is input signed?">Signed?</abbr></td><td><abbr title="is transaction an escrow transaction?">Escrow?</abbr></td>
 									</tr>
 								</thead>
 								<tbody>
@@ -676,12 +676,12 @@
 						<p>Compatible with bitcoin-qt</p>
 						<h3>How does 2 of 3 Bitcoin Escrow work?</h3>
 						<p>Our 2 of 3 Bitcoin Escrow service uses Bitcoin's <a href="https://en.bitcoin.it/wiki/Multisignature" target="_blank">multisignature function</a>. There are 3 participants in a this escrow service. A buyer, a seller and a mediator.</p>
-						<p>1. Any one of the three participants can generate <a href="#newMultiSig">a multisig address and a redeem script.</a> by adding the public key of all three participants. The mediator's public key can be selected from the list of mediators option. Alternatively, you can leave this whole process to the mediator for a smooth transaction. <br><br>If you don't have a public key, you can generate your own key combination (an address, a public key and a private key) using the<a href="#newAddress"> New Address</a> tab. 
+						<p>1. Any one of the three participants can generate <a href="#newMultiSig">an escrow address and a redeem script.</a> by adding the public key of all three participants. The mediator's public key can be selected from the list of mediators option. Alternatively, you can leave this whole process to the mediator for a smooth transaction. <br><br>If you don't have a public key, you can generate your own key combination (an address, a public key and a private key) using the<a href="#newAddress"> New Address</a> tab. 
 						<br><hr>
 						<u><b><i>NOTE: Never share your Private Key to anyone else. If you do, they can sign the transaction on your behalf and redeem all the coins to their address</i></b></u>.</p><hr>
 						<p>2. To confirm the correctness, the redeem script can be <a href="#verify">verified here</a></P>
-						<p>3. Once the redeem script is verified, the seller can send the Bitcoins to the generated multisig address. </p>
-						<p>4. Once the coins are received into the multisig address, it means the coins are locked into the escrow (meaning, it cannot be released without any of the 2 participants signing the transaction). The buyer can verify the same by submiting the redeem script<a href="#newTransaction"> in the Transaction tab here</a> which will load the unspent balance or by verifying the transaction directly in the <a href="https://www.blockchain.com/en/explorer" target="_blank">Blockchain Explorer</a> </p>
+						<p>3. Once the redeem script is verified, the seller can send the Bitcoins to the generated escrow address. </p>
+						<p>4. Once the coins are received into the escrow address, it means the coins are locked into the escrow (meaning, it cannot be released without any of the 2 participants signing the transaction). The buyer can verify the same by submiting the redeem script<a href="#newTransaction"> in the Transaction tab here</a> which will load the unspent balance or by verifying the transaction directly in the <a href="https://www.blockchain.com/en/explorer" target="_blank">Blockchain Explorer</a> </p>
 						<p>5. Now that the coins are locked, the buyer can initiate the fiat transfer and share the details of the same to the mediator and the seller. The seller confirms the completion of the fiat transfer</p>
 						<p>6. The mediator then initiates the raw transaction using <a href="#newTransaction"> the Transaction tab here</a> for releasing the the coins. The mediator does that by loading the redeem script, adding the network fee and entering the Bitcoin address where the buyer wishes to receive the coins. The mediator then shares the raw transaction to the buyer</p>
 						<p>7. The buyer signs the raw transaction using the <a href="#sign"> sign tab</a> with his/her private key. This generates a new buyer 1st signed raw transaction. The buyer shares the 1st signed raw transaction with the seller/mediator for their signature. Now either the seller or the mediator can sign the 1st signed raw transaction by repeating step 7. This will generate the 2nd signed raw transaction. </p>
