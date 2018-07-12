@@ -3,12 +3,13 @@ Bitscrow
 
 A Open Source Browser Based Bitcoin Escrow Service. Version 1.0 
 
-Live version available at 
+Live version available at https://bitscrow.online
 
 
 
 Bitscrow supports a number of key features such as: 
 
+- Customized on the code released by OutCast3k at https://github.com/OutCast3k/coinbin/
 - Offline Compressed & uncompressed Address creation.
 - Offline Multisignature Address creation.
 - "In browser" Key (re)generation. 
@@ -22,4 +23,4 @@ Bitscrow supports a number of key features such as:
 - Offline qrcode creator and scanning tool
 - HD (bip32) support
 
-Donate to 1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg to see more development!
+Donate to OutCast3k BTC address - 1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg to see more development!
