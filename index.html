@@ -92,7 +92,7 @@
 
 						<div class="jumbotron">
 							<h2>Bitcoin. It's your money!</h2>
-							<p>Be your own bank, take control of your own money by using our custom tailored 2 of 3 Bitcoin Escrow!</p>
+							<p>Be your own bank, take control of your own money by using our custom tailored 2 of 3 Bitcoin Escrow! Read <a href="#about">How To Use</a> for more information</p>
 							<!-- <p><a class="btn btn-primary btn-lg" href="#about" role="button">Learn more &raquo;</a></p> -->
 						</div>
 						<div><h2> WHY US?</h2> </div>
@@ -679,10 +679,10 @@
 					</div>
 
 					<div class="tab-pane tab-content" id="about">
-						<h2>About <small>open source bitcoin escrow system</small></h2>
-						<p>Bitcoin Escrow Source Version 1.0</p>
-						<p>Compatible with bitcoin-qt</p>
 						<h3>How does 2 of 3 Bitcoin Escrow work?</h3>
+						<p><h3><small><b>In Simple Infographic Representation</b></small></h3><br>
+						<img src="images/Escrow1.jpg" style="height:420px;margin-top:-5px"><img src="images/Escrow2.jpg" style="height:420px;margin-top:-5px">
+						</p>
 						<p>Our 2 of 3 Bitcoin Escrow service uses Bitcoin's <a href="https://en.bitcoin.it/wiki/Multisignature" target="_blank">multisignature function</a>. There are 3 participants in this escrow service. A buyer, a seller and a mediator.</p>
 						<p>1. Any one of the three participants can generate <a href="#newMultiSig">an escrow address (and a redeem script)</a> by adding the public key of all three participants. The mediator's public key can be selected from the list of mediators option. Alternatively, you can leave this whole process to the mediator for a smooth transaction. <br><br>If you don't have a public key, you can generate your own key combination (an address, a public key and a private key) using the<a href="#newAddress"> New Address</a> tab. 
 						<br><hr>
@@ -694,11 +694,9 @@
 						<p>6. The mediator then initiates the unsigned raw transaction using <a href="#newTransaction"> the Transaction tab here</a> by loading the redeem script, adding the network fee and entering the Bitcoin address where the buyer wishes to receive the coins. The mediator then shares the unsigned raw transaction to the buyer.</p>
 						<p>7. The buyer signs the raw transaction using the <a href="#sign"> sign tab</a> with his/her private key. This generates a new 1st signed raw transaction. The buyer shares the 1st signed raw transaction with the seller/mediator for their signature. Now either the seller or the mediator can sign the 1st signed raw transaction by repeating step 7. This will generate the 2nd signed raw transaction. </p>
 						<p>8. The 2nd signed raw transaction can then be broadcast to the main network using <a href="#broadcast">Broadcast tab</a> which will generate a new Transaction ID (TX ID). You can use <a href="https://www.blockchain.com/en/explorer" target="_blank">Blockchain Explorer</a> to check the status of the Transaction. This confirms the completion of the escrow transaction</p>
-						<p><h3>In Simple Infographic Representation</h3><br>
-						<img src="images/Escrow1.jpg" style="height:420px;margin-top:-5px"><img src="images/Escrow2.jpg" style="height:420px;margin-top:-5px">
-						</p>
-						
-						
+						<h2>About <small>bitscrow.online escrow system</small></h2>
+						<p>Bitcoin Escrow Source Version 1.0</p>
+						<p>Compatible with bitcoin-qt and other Bitcoin clients</p>
 						<h3>Information</h3>
 						<p>This complete client side (javascript) escrow service is customized from the open source project released under the MIT license, originally by <a href="https://bitcointalk.org/index.php?action=profile;u=34834" target="_blank">OutCast3k</a> at <a href="https://github.com/OutCast3k/coinbin/" target="_blank">Github</a>.
 						<h3>Privacy</h3>
