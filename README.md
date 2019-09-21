@@ -3,7 +3,7 @@ Bitscrow
 
 A Open Source Browser Based Bitcoin Escrow Service. Version 1.0 
 
-Live version available at https://bitscrow.online
+Live version available at https://bitscrow.site
 
 
 
